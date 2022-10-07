@@ -2,6 +2,9 @@ const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
+// in this order
+require('dotenv').config();
+require('./config/database')
 // set dev port to 3001
 const port = process.env.PORT || 3001
 

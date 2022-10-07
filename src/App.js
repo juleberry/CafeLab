@@ -8,7 +8,7 @@ import NavBar from './components/NavBar';
 
 function App() {
 
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
 
   return (
     <div className="App">
@@ -16,7 +16,6 @@ function App() {
         user ?
         <>
         <NavBar />
-        
           <Routes>
             <Route path="/orders/new" element={<NewOrder />} />
             <Route path="/orders" element={<OrderHistory />} />
