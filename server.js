@@ -20,10 +20,17 @@ app.use(express.json())
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-// ---------
-// API and other Routes go here
-// ---------
+// ------------------------
+// API and other Routes
+// ------------------------
+// User Routes
+app.use('/api/users', require('./routes/api/users'))
 
+
+
+
+
+//-------------------------------
 // if Express route not recognized, React will deal with the route
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
